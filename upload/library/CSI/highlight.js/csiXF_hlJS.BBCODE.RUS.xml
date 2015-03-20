@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright © 2015 CYBERSPACE Industries
+  Contacts: http://cyberspace.industries/
+  License: LICENSE.ENG.txt / LICENSE.RUS.txt
+-->
+<bb_codes>
+  <bb_code bb_code_id="src" bb_code_mode="replace" has_option="optional" callback_class="" callback_method="" option_regex="" trim_lines_after="1" plain_children="1" disable_smilies="1" disable_nl2br="1" disable_autolink="1" allow_signature="0" editor_icon_url="" sprite_mode="0" active="1" title="Подсветка синтаксиса" description="Подсветка синтаксиса - выделение синтаксических конструкций текста с использованием различных цветов, шрифтов и начертаний. Обычно применяется в текстовых редакторах для облегчения чтения исходного текста программ. [SRC] - автоматическая подсветка синтаксиса. [SRC=&quot;подсветка&quot;] - с определённым языком, где подсветка это: python (Python), ruby (Ruby), perl (Perl), php (PHP), xml (XML), html (HTML), css (CSS), javascript (javascript), java (Java), cpp (C++), sql (SQL), smalltalk (Smalltalk), ini (INI file), dos (DOS Style), bash (Bash Style), diff (DIFF). В скобках указаны оригинальные названия языков.">
+    <replace_html><![CDATA[<div class="bbCodeSource bbCodeSourceBlock"><pre><code class="language-{option}">{text}</code></pre></div>]]></replace_html>
+    <replace_html_email><![CDATA[]]></replace_html_email>
+    <replace_text><![CDATA[]]></replace_text>
+    <example><![CDATA[[SRC]<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <?php echo '<p>Hello World</p>'; ?>
+  </body>
+</html>[/SRC]
+
+[SRC="html"]<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Подсветка синтаксиса HTML</title>
+  </head>
+  <body>
+    <h1>Заголовок страницы</h1>
+    <p>Основной текст.</p>
+  </body>
+</html>[/SRC]
+
+[SRC="php"]<?php
+$ch = curl_init("http://www.example.com/");
+$fp = fopen("example_homepage.txt", "w");
+
+curl_setopt($ch, CURLOPT_FILE, $fp);
+curl_setopt($ch, CURLOPT_HEADER, 0);
+
+curl_exec($ch);
+curl_close($ch);
+fclose($fp);
+?>[/SRC]]]></example>
+  </bb_code>
+</bb_codes>
